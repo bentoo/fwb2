@@ -18,6 +18,10 @@
             "MyButton5",
             "Create"
         ],
+        "requires": [
+            "app.util.freedraw",
+            "app.util.camera"
+        ],
         "controllers": [
             "MyController"
         ],

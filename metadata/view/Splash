@@ -9,7 +9,6 @@
         "container|pack": "center",
         "padding": 10,
         "designer|userClassName": "Splash",
-        "designer|initialView": true,
         "layout": "vbox"
     },
     "designerId": "340d294a-7e4a-4c0d-810d-1862ac6722da",

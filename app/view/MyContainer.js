@@ -27,7 +27,6 @@ Ext.define('MyApp.view.MyContainer', {
                 docked: 'top',
                 hidden: true,
                 itemId: 'searchBar',
-                ui: 'light',
                 items: [
                     {
                         xtype: 'textfield',
@@ -141,7 +140,6 @@ Ext.define('MyApp.view.MyContainer', {
                 docked: 'bottom',
                 hidden: true,
                 itemId: 'addBar',
-                ui: 'light',
                 items: [
                     {
                         xtype: 'textfield',
@@ -158,13 +156,11 @@ Ext.define('MyApp.view.MyContainer', {
                     {
                         xtype: 'button',
                         itemId: 'addContact',
-                        ui: 'confirm',
                         text: 'Add'
                     },
                     {
                         xtype: 'button',
                         itemId: 'cancelAdd',
-                        ui: 'decline',
                         text: 'Cancel'
                     }
                 ]

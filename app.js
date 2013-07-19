@@ -32,6 +32,10 @@ Ext.application({
         'MyButton5',
         'Main'
     ],
+    requires: [
+        'app.util.freedraw',
+        'app.util.camera'
+    ],
     controllers: [
         'MyController'
     ],
@@ -39,7 +43,7 @@ Ext.application({
 
     launch: function() {
 
-        Ext.create('MyApp.view.Splash', {fullscreen: true});
+        Ext.create('MyApp.view.Main', {fullscreen: true});
     }
 
 });

@@ -24,7 +24,7 @@
     /**
      * Demonstrates smoothening and cubic bezier Curve rendering
      */
-    Ext.define('app.util.FreeDrawComponent', {
+    Ext.define('app.util.freedraw', {
         extend: 'Ext.draw.Component',
         alias: 'widget.freedraw',
         config: {

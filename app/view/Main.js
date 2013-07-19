@@ -17,11 +17,16 @@ Ext.define('MyApp.view.Main', {
     extend: 'Ext.Container',
 
     config: {
+        activeItem: 1,
         itemId: 'mainContainer',
         layout: {
             type: 'card'
         },
         items: [
+            {
+                xtype: 'freedraw',
+                id: 'Edit'
+            },
             {
                 xtype: 'container',
                 id: 'Create',
@@ -66,10 +71,6 @@ Ext.define('MyApp.view.Main', {
             },
             {
                 xtype: 'container',
-                id: 'Edit'
-            },
-            {
-                xtype: 'container',
                 id: 'History'
             },
             {
@@ -77,7 +78,6 @@ Ext.define('MyApp.view.Main', {
                 docked: 'top',
                 hidden: true,
                 itemId: 'searchBar',
-                ui: 'light',
                 items: [
                     {
                         xtype: 'textfield',
@@ -182,7 +182,6 @@ Ext.define('MyApp.view.Main', {
                 docked: 'bottom',
                 hidden: true,
                 itemId: 'addBar',
-                ui: 'light',
                 items: [
                     {
                         xtype: 'textfield',
@@ -199,13 +198,11 @@ Ext.define('MyApp.view.Main', {
                     {
                         xtype: 'button',
                         itemId: 'addContact',
-                        ui: 'confirm',
                         text: 'Add'
                     },
                     {
                         xtype: 'button',
                         itemId: 'cancelAdd',
-                        ui: 'decline',
                         text: 'Cancel'
                     }
                 ]

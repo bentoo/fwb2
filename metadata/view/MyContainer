@@ -24,7 +24,6 @@
                 "docked": "top",
                 "hidden": true,
                 "itemId": "searchBar",
-                "ui": "light",
                 "designer|displayName": "Search Bar"
             },
             "designerId": "6b4a22e2-5167-4d45-bcbb-80e401eb82ea",
@@ -293,7 +292,6 @@
                 "docked": "bottom",
                 "hidden": true,
                 "itemId": "addBar",
-                "ui": "light",
                 "designer|displayName": "Add Bar"
             },
             "designerId": "d8a575a9-b9df-44a3-adcc-7f4db131ff1d",
@@ -337,7 +335,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "itemId": "addContact",
-                        "ui": "confirm",
                         "text": "Add"
                     },
                     "designerId": "3ec24c90-526a-4246-a674-7d7a66be1a88"
@@ -351,7 +348,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "itemId": "cancelAdd",
-                        "ui": "decline",
                         "text": "Cancel"
                     },
                     "designerId": "67ef42f3-1234-45fd-89a0-ed95ffb311a3"
