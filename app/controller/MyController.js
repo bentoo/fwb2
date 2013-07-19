@@ -64,7 +64,7 @@ Ext.define('MyApp.controller.MyController', {
     },
 
     onCreateMeetingTap: function(button, e, eOpts) {
-
+        this.getMain().setActiveItem(2);
     }
 
 });

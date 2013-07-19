@@ -27,7 +27,7 @@ Ext.define('MyApp.store.Contacts', {
         storeId: 'contacts',
         proxy: {
             type: 'ajax',
-            url: 'http://10.200.1.122/touch-2.3.0-beta/touch-2.3.0/examples/blackberry/contacts.json',
+            url: 'http://localhost/touch-2.3.0-beta/touch-2.3.0/examples/blackberry/contacts.json',
             reader: {
                 type: 'json'
             }

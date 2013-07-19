@@ -22,7 +22,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "url": "http://10.200.1.122/touch-2.3.0-beta/touch-2.3.0/examples/blackberry/contacts.json"
+                "url": "http://localhost/touch-2.3.0-beta/touch-2.3.0/examples/blackberry/contacts.json"
             },
             "designerId": "59ade608-16d2-4d06-8178-490843798f91",
             "cn": [

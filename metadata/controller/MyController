@@ -116,7 +116,7 @@
             "userConfig": {
                 "fn": "onCreateMeetingTap",
                 "implHandler": [
-                    ""
+                    "this.getMain().setActiveItem(2);"
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",

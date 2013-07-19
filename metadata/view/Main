@@ -121,7 +121,7 @@
             "codeClass": null,
             "userConfig": {
                 "id": "Edit",
-                "designer|createAlias": ""
+                "designer|createAlias": null
             },
             "designerId": "ef7b8a1b-49dd-4151-bd7a-58ec5d1cf548",
             "cn": [
@@ -373,6 +373,189 @@
                             "designerId": "539e2004-6125-4432-aea5-d95abf7e99dc"
                         }
                     ]
+                },
+                {
+                    "type": "Ext.Toolbar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|pack": "center",
+                        "docked": "bottom",
+                        "hidden": false,
+                        "itemId": null,
+                        "designer|displayName": "Buttons Bar"
+                    },
+                    "designerId": "07c4a4bc-ab33-4fc4-af13-0c52e1855c5c",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "search",
+                                "text": "Search"
+                            },
+                            "designerId": "3dd6df57-dab9-435c-b8f1-bb846efe8e3d",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "handler",
+                                        "designer|params": [
+                                            "button",
+                                            "event"
+                                        ],
+                                        "implHandler": [
+                                            "var main = this.up(\"[itemId=mainContainer]\"),\r",
+                                            "\tsearchBar = main.down(\"[itemId=searchBar]\");\r",
+                                            "\r",
+                                            "searchBar.show();"
+                                        ]
+                                    },
+                                    "designerId": "a1dbe6b9-91ac-40ab-aee5-1436271bcf8b"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "add",
+                                "iconCls": "add",
+                                "text": "Add"
+                            },
+                            "designerId": "ef9c1510-0e86-4985-a6a5-35fef0eb0e02",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "handler",
+                                        "designer|params": [
+                                            "button",
+                                            "event"
+                                        ],
+                                        "implHandler": [
+                                            "var main = this.up(\"[itemId=mainContainer]\"),\r",
+                                            "    addBar = main.down(\"[itemId=addBar]\");\r",
+                                            "\r",
+                                            "addBar.show();"
+                                        ]
+                                    },
+                                    "designerId": "8f24e7a5-3d32-490f-81e8-d3d18b87fd13"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.ux.TabMenuButton",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "menuItems": [
+                                    "[{\r",
+                                    "    text: 'All',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'all',    \r",
+                                    "    iconCls: 'view_grid'\r",
+                                    "   \r",
+                                    "},{\r",
+                                    "    text: 'Favorites',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'favorites',\r",
+                                    "    iconCls: 'done'\r",
+                                    "},{\r",
+                                    "    text: 'BBM',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'bbm',\r",
+                                    "    iconCls: 'bbm'    \r",
+                                    "}]"
+                                ],
+                                "action": "hideAddBar",
+                                "docked": "left",
+                                "iconCls": "view_grid"
+                            },
+                            "configAlternates": {
+                                "menuItems": "array"
+                            },
+                            "designerId": "2f5580b6-c37a-4734-ae09-f4dca0637fae",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "menuItems",
+                                    "type": "string"
+                                },
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "action",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.ux.OverflowMenuButton",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "menuItems": [
+                                    "[{\r",
+                                    "    text: 'All',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'all',    \r",
+                                    "    iconCls: 'view_grid'\r",
+                                    "   \r",
+                                    "},{\r",
+                                    "    text: 'Favorites',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'favorites',\r",
+                                    "    iconCls: 'done'\r",
+                                    "},{\r",
+                                    "    text: 'BBM',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'bbm',\r",
+                                    "    iconCls: 'bbm'    \r",
+                                    "}]"
+                                ],
+                                "docked": "right",
+                                "iconCls": "overflow_tab"
+                            },
+                            "configAlternates": {
+                                "menuItems": "array"
+                            },
+                            "designerId": "20f589cd-a50e-4675-9ebf-ad4efa11109e",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "menuItems",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         },
@@ -386,7 +569,192 @@
             "userConfig": {
                 "id": "Share"
             },
-            "designerId": "9b6ce9bf-2410-4036-9fbb-b1459a781461"
+            "designerId": "9b6ce9bf-2410-4036-9fbb-b1459a781461",
+            "cn": [
+                {
+                    "type": "Ext.Toolbar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|pack": "center",
+                        "docked": "bottom",
+                        "hidden": false,
+                        "itemId": null,
+                        "designer|displayName": "Buttons Bar"
+                    },
+                    "designerId": "59353a17-e5e7-4a18-ab6c-4e450a388141",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "search",
+                                "text": "Search"
+                            },
+                            "designerId": "f2f9f043-38b5-4932-b6f9-ce21195390b7",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "handler",
+                                        "designer|params": [
+                                            "button",
+                                            "event"
+                                        ],
+                                        "implHandler": [
+                                            "var main = this.up(\"[itemId=mainContainer]\"),\r",
+                                            "\tsearchBar = main.down(\"[itemId=searchBar]\");\r",
+                                            "\r",
+                                            "searchBar.show();"
+                                        ]
+                                    },
+                                    "designerId": "8082a8a9-1ec3-4774-9dad-c801cd06b80f"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "add",
+                                "iconCls": "add",
+                                "text": "Add"
+                            },
+                            "designerId": "13c4c730-1389-4d30-942c-483072be7d3b",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "handler",
+                                        "designer|params": [
+                                            "button",
+                                            "event"
+                                        ],
+                                        "implHandler": [
+                                            "var main = this.up(\"[itemId=mainContainer]\"),\r",
+                                            "    addBar = main.down(\"[itemId=addBar]\");\r",
+                                            "\r",
+                                            "addBar.show();"
+                                        ]
+                                    },
+                                    "designerId": "5bf6591d-6cbd-4d5c-94d6-16478206411f"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.ux.TabMenuButton",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "menuItems": [
+                                    "[{\r",
+                                    "    text: 'All',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'all',    \r",
+                                    "    iconCls: 'view_grid'\r",
+                                    "   \r",
+                                    "},{\r",
+                                    "    text: 'Favorites',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'favorites',\r",
+                                    "    iconCls: 'done'\r",
+                                    "},{\r",
+                                    "    text: 'BBM',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'bbm',\r",
+                                    "    iconCls: 'bbm'    \r",
+                                    "}]"
+                                ],
+                                "action": "hideAddBar",
+                                "docked": "left",
+                                "iconCls": "view_grid"
+                            },
+                            "configAlternates": {
+                                "menuItems": "array"
+                            },
+                            "designerId": "bdc02a4d-5751-49f8-a3b4-0548c39deaef",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "menuItems",
+                                    "type": "string"
+                                },
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "action",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.ux.OverflowMenuButton",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "menuItems": [
+                                    "[{\r",
+                                    "    text: 'All',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'all',    \r",
+                                    "    iconCls: 'view_grid'\r",
+                                    "   \r",
+                                    "},{\r",
+                                    "    text: 'Favorites',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'favorites',\r",
+                                    "    iconCls: 'done'\r",
+                                    "},{\r",
+                                    "    text: 'BBM',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'bbm',\r",
+                                    "    iconCls: 'bbm'    \r",
+                                    "}]"
+                                ],
+                                "docked": "right",
+                                "iconCls": "overflow_tab"
+                            },
+                            "configAlternates": {
+                                "menuItems": "array"
+                            },
+                            "designerId": "0fe02fc1-d4bd-4a3c-98b5-8007cdc6e678",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "menuItems",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "type": "Ext.Container",
@@ -398,7 +766,255 @@
             "userConfig": {
                 "id": "Join"
             },
-            "designerId": "864be91b-54aa-447c-8476-81a4c5255c16"
+            "designerId": "864be91b-54aa-447c-8476-81a4c5255c16",
+            "cn": [
+                {
+                    "type": "Ext.form.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "designerId": "8c98d440-e8bf-44d8-9ee9-5a1e4db9b055",
+                    "cn": [
+                        {
+                            "type": "Ext.form.FieldSet",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "title": "Meeting"
+                            },
+                            "designerId": "88e93866-b1b5-4eef-ac83-05096728e91b",
+                            "cn": [
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "Title"
+                                    },
+                                    "designerId": "9db5c007-078e-46e0-a61b-ed89b4702ee2"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.form.FieldSet",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "title": "User"
+                            },
+                            "designerId": "1161d941-58cd-4b83-ba56-2d330dd78722",
+                            "cn": [
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": "Name"
+                                    },
+                                    "designerId": "d13f1a5a-2a74-45ce-a2a3-33557ed914af"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Toolbar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|pack": "center",
+                        "docked": "bottom",
+                        "hidden": false,
+                        "itemId": null,
+                        "designer|displayName": "Buttons Bar"
+                    },
+                    "designerId": "7a5d7d68-51e2-419f-9f52-f617c5c8eee0",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "search",
+                                "text": "Search"
+                            },
+                            "designerId": "1418dfd9-6980-460c-a87f-f9278306742c",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "handler",
+                                        "designer|params": [
+                                            "button",
+                                            "event"
+                                        ],
+                                        "implHandler": [
+                                            "var main = this.up(\"[itemId=mainContainer]\"),\r",
+                                            "\tsearchBar = main.down(\"[itemId=searchBar]\");\r",
+                                            "\r",
+                                            "searchBar.show();"
+                                        ]
+                                    },
+                                    "designerId": "115e9fe2-8468-45cc-93f3-be4ddbe0a1e3"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "add",
+                                "iconCls": "add",
+                                "text": "Add"
+                            },
+                            "designerId": "e8d21b2f-561e-42f1-8e60-c4a70bf9551b",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "handler",
+                                        "designer|params": [
+                                            "button",
+                                            "event"
+                                        ],
+                                        "implHandler": [
+                                            "var main = this.up(\"[itemId=mainContainer]\"),\r",
+                                            "    addBar = main.down(\"[itemId=addBar]\");\r",
+                                            "\r",
+                                            "addBar.show();"
+                                        ]
+                                    },
+                                    "designerId": "41413b27-0fee-49e7-865d-0be546091582"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.ux.TabMenuButton",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "menuItems": [
+                                    "[{\r",
+                                    "    text: 'All',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'all',    \r",
+                                    "    iconCls: 'view_grid'\r",
+                                    "   \r",
+                                    "},{\r",
+                                    "    text: 'Favorites',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'favorites',\r",
+                                    "    iconCls: 'done'\r",
+                                    "},{\r",
+                                    "    text: 'BBM',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'bbm',\r",
+                                    "    iconCls: 'bbm'    \r",
+                                    "}]"
+                                ],
+                                "action": "hideAddBar",
+                                "docked": "left",
+                                "iconCls": "view_grid"
+                            },
+                            "configAlternates": {
+                                "menuItems": "array"
+                            },
+                            "designerId": "94e36b44-fc5d-4d27-84d7-7ccd943a7c5e",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "menuItems",
+                                    "type": "string"
+                                },
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "action",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.ux.OverflowMenuButton",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "menuItems": [
+                                    "[{\r",
+                                    "    text: 'All',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'all',    \r",
+                                    "    iconCls: 'view_grid'\r",
+                                    "   \r",
+                                    "},{\r",
+                                    "    text: 'Favorites',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'favorites',\r",
+                                    "    iconCls: 'done'\r",
+                                    "},{\r",
+                                    "    text: 'BBM',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'bbm',\r",
+                                    "    iconCls: 'bbm'    \r",
+                                    "}]"
+                                ],
+                                "docked": "right",
+                                "iconCls": "overflow_tab"
+                            },
+                            "configAlternates": {
+                                "menuItems": "array"
+                            },
+                            "designerId": "ec42a55d-297b-456d-ac2b-21c7e8d017b7",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "menuItems",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "type": "Ext.Container",
@@ -410,7 +1026,192 @@
             "userConfig": {
                 "id": "Slides"
             },
-            "designerId": "dde0c94c-baa2-43b8-b9b3-6e7b6b34e642"
+            "designerId": "dde0c94c-baa2-43b8-b9b3-6e7b6b34e642",
+            "cn": [
+                {
+                    "type": "Ext.Toolbar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|pack": "center",
+                        "docked": "bottom",
+                        "hidden": false,
+                        "itemId": null,
+                        "designer|displayName": "Buttons Bar"
+                    },
+                    "designerId": "695a9d93-ce2b-461e-8373-1279e332cac5",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "search",
+                                "text": "Search"
+                            },
+                            "designerId": "4b5e2226-1173-443c-bb8f-802352fc501b",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "handler",
+                                        "designer|params": [
+                                            "button",
+                                            "event"
+                                        ],
+                                        "implHandler": [
+                                            "var main = this.up(\"[itemId=mainContainer]\"),\r",
+                                            "\tsearchBar = main.down(\"[itemId=searchBar]\");\r",
+                                            "\r",
+                                            "searchBar.show();"
+                                        ]
+                                    },
+                                    "designerId": "2c9f80b1-5faf-487a-9be8-b094cabeb841"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "add",
+                                "iconCls": "add",
+                                "text": "Add"
+                            },
+                            "designerId": "e4037334-1d9c-4c94-acc5-aec55b56f4d1",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "handler",
+                                        "designer|params": [
+                                            "button",
+                                            "event"
+                                        ],
+                                        "implHandler": [
+                                            "var main = this.up(\"[itemId=mainContainer]\"),\r",
+                                            "    addBar = main.down(\"[itemId=addBar]\");\r",
+                                            "\r",
+                                            "addBar.show();"
+                                        ]
+                                    },
+                                    "designerId": "cd1481bf-40ec-4250-969a-aa32867e4149"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.ux.TabMenuButton",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "menuItems": [
+                                    "[{\r",
+                                    "    text: 'All',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'all',    \r",
+                                    "    iconCls: 'view_grid'\r",
+                                    "   \r",
+                                    "},{\r",
+                                    "    text: 'Favorites',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'favorites',\r",
+                                    "    iconCls: 'done'\r",
+                                    "},{\r",
+                                    "    text: 'BBM',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'bbm',\r",
+                                    "    iconCls: 'bbm'    \r",
+                                    "}]"
+                                ],
+                                "action": "hideAddBar",
+                                "docked": "left",
+                                "iconCls": "view_grid"
+                            },
+                            "configAlternates": {
+                                "menuItems": "array"
+                            },
+                            "designerId": "71492de9-c89a-405d-af30-faa2e3ae7529",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "menuItems",
+                                    "type": "string"
+                                },
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "action",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.ux.OverflowMenuButton",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "menuItems": [
+                                    "[{\r",
+                                    "    text: 'All',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'all',    \r",
+                                    "    iconCls: 'view_grid'\r",
+                                    "   \r",
+                                    "},{\r",
+                                    "    text: 'Favorites',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'favorites',\r",
+                                    "    iconCls: 'done'\r",
+                                    "},{\r",
+                                    "    text: 'BBM',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'bbm',\r",
+                                    "    iconCls: 'bbm'    \r",
+                                    "}]"
+                                ],
+                                "docked": "right",
+                                "iconCls": "overflow_tab"
+                            },
+                            "configAlternates": {
+                                "menuItems": "array"
+                            },
+                            "designerId": "ce71b41b-dab1-4d81-8376-8dec6697ea62",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "menuItems",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "type": "Ext.Container",
@@ -423,7 +1224,192 @@
                 "id": "Capture",
                 "designer|createAlias": "camera"
             },
-            "designerId": "e9df5bc1-8115-491d-9d6e-83799e4edf75"
+            "designerId": "e9df5bc1-8115-491d-9d6e-83799e4edf75",
+            "cn": [
+                {
+                    "type": "Ext.Toolbar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|pack": "center",
+                        "docked": "bottom",
+                        "hidden": false,
+                        "itemId": null,
+                        "designer|displayName": "Buttons Bar"
+                    },
+                    "designerId": "388e2d32-fe3e-468c-a93a-3bd1ea5ec52e",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "search",
+                                "text": "Accept"
+                            },
+                            "designerId": "8d41fe90-3693-4ba4-aedb-e3260492dd05",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "handler",
+                                        "designer|params": [
+                                            "button",
+                                            "event"
+                                        ],
+                                        "implHandler": [
+                                            "var main = this.up(\"[itemId=mainContainer]\"),\r",
+                                            "\tsearchBar = main.down(\"[itemId=searchBar]\");\r",
+                                            "\r",
+                                            "searchBar.show();"
+                                        ]
+                                    },
+                                    "designerId": "7730ca64-5434-457d-a725-6e14acdd37cf"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "add",
+                                "iconCls": "add",
+                                "text": "Retake"
+                            },
+                            "designerId": "1451ee67-093d-4351-8843-6a03f3abba28",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "handler",
+                                        "designer|params": [
+                                            "button",
+                                            "event"
+                                        ],
+                                        "implHandler": [
+                                            "var main = this.up(\"[itemId=mainContainer]\"),\r",
+                                            "    addBar = main.down(\"[itemId=addBar]\");\r",
+                                            "\r",
+                                            "addBar.show();"
+                                        ]
+                                    },
+                                    "designerId": "2d34b934-914f-429b-8cc6-9b5fbf0584cb"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.ux.TabMenuButton",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "menuItems": [
+                                    "[{\r",
+                                    "    text: 'All',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'all',    \r",
+                                    "    iconCls: 'view_grid'\r",
+                                    "   \r",
+                                    "},{\r",
+                                    "    text: 'Favorites',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'favorites',\r",
+                                    "    iconCls: 'done'\r",
+                                    "},{\r",
+                                    "    text: 'BBM',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'bbm',\r",
+                                    "    iconCls: 'bbm'    \r",
+                                    "}]"
+                                ],
+                                "action": "hideAddBar",
+                                "docked": "left",
+                                "iconCls": "view_grid"
+                            },
+                            "configAlternates": {
+                                "menuItems": "array"
+                            },
+                            "designerId": "d238d8ba-6843-41ca-a958-a6ddabbdbab2",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "menuItems",
+                                    "type": "string"
+                                },
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "action",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.ux.OverflowMenuButton",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "menuItems": [
+                                    "[{\r",
+                                    "    text: 'All',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'all',    \r",
+                                    "    iconCls: 'view_grid'\r",
+                                    "   \r",
+                                    "},{\r",
+                                    "    text: 'Favorites',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'favorites',\r",
+                                    "    iconCls: 'done'\r",
+                                    "},{\r",
+                                    "    text: 'BBM',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'bbm',\r",
+                                    "    iconCls: 'bbm'    \r",
+                                    "}]"
+                                ],
+                                "docked": "right",
+                                "iconCls": "overflow_tab"
+                            },
+                            "configAlternates": {
+                                "menuItems": "array"
+                            },
+                            "designerId": "38013d8e-95ac-4c98-94a4-96cb82c29da1",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "menuItems",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "type": "Ext.Container",
@@ -435,7 +1421,192 @@
             "userConfig": {
                 "id": "History"
             },
-            "designerId": "244c7e39-8342-4ef4-bdc4-ec890acd42b4"
+            "designerId": "244c7e39-8342-4ef4-bdc4-ec890acd42b4",
+            "cn": [
+                {
+                    "type": "Ext.Toolbar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|pack": "center",
+                        "docked": "bottom",
+                        "hidden": false,
+                        "itemId": null,
+                        "designer|displayName": "Buttons Bar"
+                    },
+                    "designerId": "479f9b70-4844-4b64-ae33-eb591f8998cb",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconCls": "search",
+                                "text": "Search"
+                            },
+                            "designerId": "e868cc9f-9241-4c88-8d72-015838a01899",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "handler",
+                                        "designer|params": [
+                                            "button",
+                                            "event"
+                                        ],
+                                        "implHandler": [
+                                            "var main = this.up(\"[itemId=mainContainer]\"),\r",
+                                            "\tsearchBar = main.down(\"[itemId=searchBar]\");\r",
+                                            "\r",
+                                            "searchBar.show();"
+                                        ]
+                                    },
+                                    "designerId": "cc5e7170-7a24-41a1-b395-28d13cad6f65"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "add",
+                                "iconCls": "add",
+                                "text": "Add"
+                            },
+                            "designerId": "e3766bf9-6680-40e6-8e17-41a5c623226c",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "handler",
+                                        "designer|params": [
+                                            "button",
+                                            "event"
+                                        ],
+                                        "implHandler": [
+                                            "var main = this.up(\"[itemId=mainContainer]\"),\r",
+                                            "    addBar = main.down(\"[itemId=addBar]\");\r",
+                                            "\r",
+                                            "addBar.show();"
+                                        ]
+                                    },
+                                    "designerId": "fc2c8c9a-9c88-49e3-8fad-25640b5acbd4"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.ux.TabMenuButton",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "menuItems": [
+                                    "[{\r",
+                                    "    text: 'All',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'all',    \r",
+                                    "    iconCls: 'view_grid'\r",
+                                    "   \r",
+                                    "},{\r",
+                                    "    text: 'Favorites',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'favorites',\r",
+                                    "    iconCls: 'done'\r",
+                                    "},{\r",
+                                    "    text: 'BBM',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'bbm',\r",
+                                    "    iconCls: 'bbm'    \r",
+                                    "}]"
+                                ],
+                                "action": "hideAddBar",
+                                "docked": "left",
+                                "iconCls": "view_grid"
+                            },
+                            "configAlternates": {
+                                "menuItems": "array"
+                            },
+                            "designerId": "917a87f1-9081-44bf-a818-0f95e64b9d8d",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "menuItems",
+                                    "type": "string"
+                                },
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "action",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.ux.OverflowMenuButton",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "menuItems": [
+                                    "[{\r",
+                                    "    text: 'All',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'all',    \r",
+                                    "    iconCls: 'view_grid'\r",
+                                    "   \r",
+                                    "},{\r",
+                                    "    text: 'Favorites',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'favorites',\r",
+                                    "    iconCls: 'done'\r",
+                                    "},{\r",
+                                    "    text: 'BBM',\r",
+                                    "    action: 'filterType',\r",
+                                    "    filterType: 'bbm',\r",
+                                    "    iconCls: 'bbm'    \r",
+                                    "}]"
+                                ],
+                                "docked": "right",
+                                "iconCls": "overflow_tab"
+                            },
+                            "configAlternates": {
+                                "menuItems": "array"
+                            },
+                            "designerId": "efb496bb-41c6-45f6-b293-b13dbafbe981",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "menuItems",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "type": "fixedfunction",

@@ -180,28 +180,573 @@ Ext.define('MyApp.view.Main', {
                                 label: 'Name'
                             }
                         ]
+                    },
+                    {
+                        xtype: 'toolbar',
+                        docked: 'bottom',
+                        hidden: false,
+                        layout: {
+                            pack: 'center',
+                            type: 'hbox'
+                        },
+                        items: [
+                            {
+                                xtype: 'button',
+                                handler: function(button, event) {
+                                    var main = this.up("[itemId=mainContainer]"),
+                                        searchBar = main.down("[itemId=searchBar]");
+
+                                    searchBar.show();
+                                },
+                                iconCls: 'search',
+                                text: 'Search'
+                            },
+                            {
+                                xtype: 'button',
+                                handler: function(button, event) {
+                                    var main = this.up("[itemId=mainContainer]"),
+                                        addBar = main.down("[itemId=addBar]");
+
+                                    addBar.show();
+                                },
+                                itemId: 'add',
+                                iconCls: 'add',
+                                text: 'Add'
+                            },
+                            {
+                                xtype: 'tabmenubutton',
+                                menuItems: [
+                                    {
+                                        text: 'All',
+                                        action: 'filterType',
+                                        filterType: 'all',
+                                        iconCls: 'view_grid'
+                                    },
+                                    {
+                                        text: 'Favorites',
+                                        action: 'filterType',
+                                        filterType: 'favorites',
+                                        iconCls: 'done'
+                                    },
+                                    {
+                                        text: 'BBM',
+                                        action: 'filterType',
+                                        filterType: 'bbm',
+                                        iconCls: 'bbm'
+                                    }
+                                ],
+                                action: 'hideAddBar',
+                                docked: 'left',
+                                iconCls: 'view_grid'
+                            },
+                            {
+                                xtype: 'overflowmenubutton',
+                                menuItems: [
+                                    {
+                                        text: 'All',
+                                        action: 'filterType',
+                                        filterType: 'all',
+                                        iconCls: 'view_grid'
+                                    },
+                                    {
+                                        text: 'Favorites',
+                                        action: 'filterType',
+                                        filterType: 'favorites',
+                                        iconCls: 'done'
+                                    },
+                                    {
+                                        text: 'BBM',
+                                        action: 'filterType',
+                                        filterType: 'bbm',
+                                        iconCls: 'bbm'
+                                    }
+                                ],
+                                docked: 'right',
+                                iconCls: 'overflow_tab'
+                            }
+                        ]
                     }
                 ]
             },
             {
                 xtype: 'container',
-                id: 'Share'
+                id: 'Share',
+                items: [
+                    {
+                        xtype: 'toolbar',
+                        docked: 'bottom',
+                        hidden: false,
+                        layout: {
+                            pack: 'center',
+                            type: 'hbox'
+                        },
+                        items: [
+                            {
+                                xtype: 'button',
+                                handler: function(button, event) {
+                                    var main = this.up("[itemId=mainContainer]"),
+                                        searchBar = main.down("[itemId=searchBar]");
+
+                                    searchBar.show();
+                                },
+                                iconCls: 'search',
+                                text: 'Search'
+                            },
+                            {
+                                xtype: 'button',
+                                handler: function(button, event) {
+                                    var main = this.up("[itemId=mainContainer]"),
+                                        addBar = main.down("[itemId=addBar]");
+
+                                    addBar.show();
+                                },
+                                itemId: 'add',
+                                iconCls: 'add',
+                                text: 'Add'
+                            },
+                            {
+                                xtype: 'tabmenubutton',
+                                menuItems: [
+                                    {
+                                        text: 'All',
+                                        action: 'filterType',
+                                        filterType: 'all',
+                                        iconCls: 'view_grid'
+                                    },
+                                    {
+                                        text: 'Favorites',
+                                        action: 'filterType',
+                                        filterType: 'favorites',
+                                        iconCls: 'done'
+                                    },
+                                    {
+                                        text: 'BBM',
+                                        action: 'filterType',
+                                        filterType: 'bbm',
+                                        iconCls: 'bbm'
+                                    }
+                                ],
+                                action: 'hideAddBar',
+                                docked: 'left',
+                                iconCls: 'view_grid'
+                            },
+                            {
+                                xtype: 'overflowmenubutton',
+                                menuItems: [
+                                    {
+                                        text: 'All',
+                                        action: 'filterType',
+                                        filterType: 'all',
+                                        iconCls: 'view_grid'
+                                    },
+                                    {
+                                        text: 'Favorites',
+                                        action: 'filterType',
+                                        filterType: 'favorites',
+                                        iconCls: 'done'
+                                    },
+                                    {
+                                        text: 'BBM',
+                                        action: 'filterType',
+                                        filterType: 'bbm',
+                                        iconCls: 'bbm'
+                                    }
+                                ],
+                                docked: 'right',
+                                iconCls: 'overflow_tab'
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 xtype: 'container',
-                id: 'Join'
+                id: 'Join',
+                items: [
+                    {
+                        xtype: 'formpanel',
+                        items: [
+                            {
+                                xtype: 'fieldset',
+                                title: 'Meeting',
+                                items: [
+                                    {
+                                        xtype: 'textfield',
+                                        label: 'Title'
+                                    }
+                                ]
+                            },
+                            {
+                                xtype: 'fieldset',
+                                title: 'User',
+                                items: [
+                                    {
+                                        xtype: 'textfield',
+                                        label: 'Name'
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'toolbar',
+                        docked: 'bottom',
+                        hidden: false,
+                        layout: {
+                            pack: 'center',
+                            type: 'hbox'
+                        },
+                        items: [
+                            {
+                                xtype: 'button',
+                                handler: function(button, event) {
+                                    var main = this.up("[itemId=mainContainer]"),
+                                        searchBar = main.down("[itemId=searchBar]");
+
+                                    searchBar.show();
+                                },
+                                iconCls: 'search',
+                                text: 'Search'
+                            },
+                            {
+                                xtype: 'button',
+                                handler: function(button, event) {
+                                    var main = this.up("[itemId=mainContainer]"),
+                                        addBar = main.down("[itemId=addBar]");
+
+                                    addBar.show();
+                                },
+                                itemId: 'add',
+                                iconCls: 'add',
+                                text: 'Add'
+                            },
+                            {
+                                xtype: 'tabmenubutton',
+                                menuItems: [
+                                    {
+                                        text: 'All',
+                                        action: 'filterType',
+                                        filterType: 'all',
+                                        iconCls: 'view_grid'
+                                    },
+                                    {
+                                        text: 'Favorites',
+                                        action: 'filterType',
+                                        filterType: 'favorites',
+                                        iconCls: 'done'
+                                    },
+                                    {
+                                        text: 'BBM',
+                                        action: 'filterType',
+                                        filterType: 'bbm',
+                                        iconCls: 'bbm'
+                                    }
+                                ],
+                                action: 'hideAddBar',
+                                docked: 'left',
+                                iconCls: 'view_grid'
+                            },
+                            {
+                                xtype: 'overflowmenubutton',
+                                menuItems: [
+                                    {
+                                        text: 'All',
+                                        action: 'filterType',
+                                        filterType: 'all',
+                                        iconCls: 'view_grid'
+                                    },
+                                    {
+                                        text: 'Favorites',
+                                        action: 'filterType',
+                                        filterType: 'favorites',
+                                        iconCls: 'done'
+                                    },
+                                    {
+                                        text: 'BBM',
+                                        action: 'filterType',
+                                        filterType: 'bbm',
+                                        iconCls: 'bbm'
+                                    }
+                                ],
+                                docked: 'right',
+                                iconCls: 'overflow_tab'
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 xtype: 'container',
-                id: 'Slides'
+                id: 'Slides',
+                items: [
+                    {
+                        xtype: 'toolbar',
+                        docked: 'bottom',
+                        hidden: false,
+                        layout: {
+                            pack: 'center',
+                            type: 'hbox'
+                        },
+                        items: [
+                            {
+                                xtype: 'button',
+                                handler: function(button, event) {
+                                    var main = this.up("[itemId=mainContainer]"),
+                                        searchBar = main.down("[itemId=searchBar]");
+
+                                    searchBar.show();
+                                },
+                                iconCls: 'search',
+                                text: 'Search'
+                            },
+                            {
+                                xtype: 'button',
+                                handler: function(button, event) {
+                                    var main = this.up("[itemId=mainContainer]"),
+                                        addBar = main.down("[itemId=addBar]");
+
+                                    addBar.show();
+                                },
+                                itemId: 'add',
+                                iconCls: 'add',
+                                text: 'Add'
+                            },
+                            {
+                                xtype: 'tabmenubutton',
+                                menuItems: [
+                                    {
+                                        text: 'All',
+                                        action: 'filterType',
+                                        filterType: 'all',
+                                        iconCls: 'view_grid'
+                                    },
+                                    {
+                                        text: 'Favorites',
+                                        action: 'filterType',
+                                        filterType: 'favorites',
+                                        iconCls: 'done'
+                                    },
+                                    {
+                                        text: 'BBM',
+                                        action: 'filterType',
+                                        filterType: 'bbm',
+                                        iconCls: 'bbm'
+                                    }
+                                ],
+                                action: 'hideAddBar',
+                                docked: 'left',
+                                iconCls: 'view_grid'
+                            },
+                            {
+                                xtype: 'overflowmenubutton',
+                                menuItems: [
+                                    {
+                                        text: 'All',
+                                        action: 'filterType',
+                                        filterType: 'all',
+                                        iconCls: 'view_grid'
+                                    },
+                                    {
+                                        text: 'Favorites',
+                                        action: 'filterType',
+                                        filterType: 'favorites',
+                                        iconCls: 'done'
+                                    },
+                                    {
+                                        text: 'BBM',
+                                        action: 'filterType',
+                                        filterType: 'bbm',
+                                        iconCls: 'bbm'
+                                    }
+                                ],
+                                docked: 'right',
+                                iconCls: 'overflow_tab'
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 xtype: 'camera',
-                id: 'Capture'
+                id: 'Capture',
+                items: [
+                    {
+                        xtype: 'toolbar',
+                        docked: 'bottom',
+                        hidden: false,
+                        layout: {
+                            pack: 'center',
+                            type: 'hbox'
+                        },
+                        items: [
+                            {
+                                xtype: 'button',
+                                handler: function(button, event) {
+                                    var main = this.up("[itemId=mainContainer]"),
+                                        searchBar = main.down("[itemId=searchBar]");
+
+                                    searchBar.show();
+                                },
+                                iconCls: 'search',
+                                text: 'Accept'
+                            },
+                            {
+                                xtype: 'button',
+                                handler: function(button, event) {
+                                    var main = this.up("[itemId=mainContainer]"),
+                                        addBar = main.down("[itemId=addBar]");
+
+                                    addBar.show();
+                                },
+                                itemId: 'add',
+                                iconCls: 'add',
+                                text: 'Retake'
+                            },
+                            {
+                                xtype: 'tabmenubutton',
+                                menuItems: [
+                                    {
+                                        text: 'All',
+                                        action: 'filterType',
+                                        filterType: 'all',
+                                        iconCls: 'view_grid'
+                                    },
+                                    {
+                                        text: 'Favorites',
+                                        action: 'filterType',
+                                        filterType: 'favorites',
+                                        iconCls: 'done'
+                                    },
+                                    {
+                                        text: 'BBM',
+                                        action: 'filterType',
+                                        filterType: 'bbm',
+                                        iconCls: 'bbm'
+                                    }
+                                ],
+                                action: 'hideAddBar',
+                                docked: 'left',
+                                iconCls: 'view_grid'
+                            },
+                            {
+                                xtype: 'overflowmenubutton',
+                                menuItems: [
+                                    {
+                                        text: 'All',
+                                        action: 'filterType',
+                                        filterType: 'all',
+                                        iconCls: 'view_grid'
+                                    },
+                                    {
+                                        text: 'Favorites',
+                                        action: 'filterType',
+                                        filterType: 'favorites',
+                                        iconCls: 'done'
+                                    },
+                                    {
+                                        text: 'BBM',
+                                        action: 'filterType',
+                                        filterType: 'bbm',
+                                        iconCls: 'bbm'
+                                    }
+                                ],
+                                docked: 'right',
+                                iconCls: 'overflow_tab'
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 xtype: 'container',
-                id: 'History'
+                id: 'History',
+                items: [
+                    {
+                        xtype: 'toolbar',
+                        docked: 'bottom',
+                        hidden: false,
+                        layout: {
+                            pack: 'center',
+                            type: 'hbox'
+                        },
+                        items: [
+                            {
+                                xtype: 'button',
+                                handler: function(button, event) {
+                                    var main = this.up("[itemId=mainContainer]"),
+                                        searchBar = main.down("[itemId=searchBar]");
+
+                                    searchBar.show();
+                                },
+                                iconCls: 'search',
+                                text: 'Search'
+                            },
+                            {
+                                xtype: 'button',
+                                handler: function(button, event) {
+                                    var main = this.up("[itemId=mainContainer]"),
+                                        addBar = main.down("[itemId=addBar]");
+
+                                    addBar.show();
+                                },
+                                itemId: 'add',
+                                iconCls: 'add',
+                                text: 'Add'
+                            },
+                            {
+                                xtype: 'tabmenubutton',
+                                menuItems: [
+                                    {
+                                        text: 'All',
+                                        action: 'filterType',
+                                        filterType: 'all',
+                                        iconCls: 'view_grid'
+                                    },
+                                    {
+                                        text: 'Favorites',
+                                        action: 'filterType',
+                                        filterType: 'favorites',
+                                        iconCls: 'done'
+                                    },
+                                    {
+                                        text: 'BBM',
+                                        action: 'filterType',
+                                        filterType: 'bbm',
+                                        iconCls: 'bbm'
+                                    }
+                                ],
+                                action: 'hideAddBar',
+                                docked: 'left',
+                                iconCls: 'view_grid'
+                            },
+                            {
+                                xtype: 'overflowmenubutton',
+                                menuItems: [
+                                    {
+                                        text: 'All',
+                                        action: 'filterType',
+                                        filterType: 'all',
+                                        iconCls: 'view_grid'
+                                    },
+                                    {
+                                        text: 'Favorites',
+                                        action: 'filterType',
+                                        filterType: 'favorites',
+                                        iconCls: 'done'
+                                    },
+                                    {
+                                        text: 'BBM',
+                                        action: 'filterType',
+                                        filterType: 'bbm',
+                                        iconCls: 'bbm'
+                                    }
+                                ],
+                                docked: 'right',
+                                iconCls: 'overflow_tab'
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     },
