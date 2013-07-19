@@ -11,252 +11,82 @@
     "designerId": "f23e95e3-0c78-462c-bf0f-e63ffd1d3ed4",
     "cn": [
         {
-            "type": "fixedfunction",
+            "type": "staticfunction",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "init",
+                "fn": "joinMeeting",
                 "designer|params": [
-                    "application"
+                    "meeting_number",
+                    "userName"
                 ],
                 "implHandler": [
-                    "this.control({\r",
-                    "    'button[action=filterType]': {\r",
-                    "        tap: this.filterByType\r",
-                    "    },\r",
-                    "    'button[action=resetSearchbar]': {\r",
-                    "        tap: this.resetSearchbar\r",
-                    "    },\r",
-                    "    'textfield[itemId=searchContacts]': {\r",
-                    "        keyup: this.filterByKey\r",
-                    "    },\r",
-                    "    'button[itemId=addContact]': {\r",
-                    "        tap: this.addContact\r",
-                    "    },\r",
-                    "    'button[itemId=cancelAdd]': {\r",
-                    "        tap: this.cancelAdd\r",
-                    "    },\r",
-                    "    'tabmenubutton[action=hideAddBar]': {\r",
-                    "        tap: this.hideAddBar\r",
-                    "    }\r",
-                    "    \r",
-                    "});"
-                ]
-            },
-            "designerId": "4f687006-3f0c-46e0-8e55-ec37596a8a07"
-        },
-        {
-            "type": "controllerref",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "ref": "contactsList",
-                "selector": "#contactsList"
-            },
-            "designerId": "9c8c6d85-f18a-44d6-84c7-1681e15bf7ef"
-        },
-        {
-            "type": "controllerref",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "ref": "mainContainer",
-                "selector": "#mainContainer"
-            },
-            "designerId": "ae06ea1e-9555-4dba-ae97-df6c82c86077"
-        },
-        {
-            "type": "basicfunction",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "filterByType",
-                "designer|params": [
-                    "button"
-                ],
-                "implHandler": [
-                    "var me = this,\r",
-                    "\tcontacts = me.getContactsList(),\r",
-                    "    store = contacts.getStore(),\r",
-                    "    ftype = button.filterType ? button.filterType : button.config.filterType;\r",
-                    "\r",
-                    "if (ftype === 'all') {\r",
-                    "\tstore.clearFilter();\r",
-                    "} else {\r",
-                    "\tstore.filter(\"type\", ftype);\r",
-                    "}\r",
-                    "\r",
-                    "this.hideAddBar();"
-                ]
-            },
-            "designerId": "8739444d-5867-4852-b353-d7e2c083c4dc"
-        },
-        {
-            "type": "basicfunction",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "hideSearchbar",
-                "implHandler": [
-                    "var main = this.getMainContainer(),\r",
-                    "\tsearchBar = main.down(\"[itemId=searchBar]\");\r",
-                    "\r",
-                    "searchBar.hide();"
-                ]
-            },
-            "designerId": "e8a83a45-8e30-434c-84d5-91dfc4721892"
-        },
-        {
-            "type": "basicfunction",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "resetSearchbar",
-                "implHandler": [
-                    "var main = this.getMainContainer(),\r",
-                    "    searchField = main.down(\"textfield\");\r",
-                    "\r",
-                    "searchField.setValue();\r",
-                    "this.hideSearchbar();"
-                ]
-            },
-            "designerId": "1796a21c-eb88-4967-bc3f-cb63fec18f05"
-        },
-        {
-            "type": "basicfunction",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "filterByKey",
-                "designer|params": [
-                    "textfield"
-                ],
-                "implHandler": [
-                    "var me = this,\r",
-                    "\tcontacts = me.getContactsList(),\r",
-                    "    store = contacts.getStore(),\r",
-                    "    value = textfield.getValue();\r",
-                    "\r",
-                    "console.log('dfdfdfdf');\r",
-                    "                                \r",
-                    "if (value && value.length) {\r",
-                    "    var filter = [{\r",
-                    "        filterFn: function(record) {\r",
-                    "            var firstName = record.get('firstName').toLowerCase(),\r",
-                    "                lastName = record.get('lastName').toLowerCase();\r",
-                    "            \r",
-                    "            if (firstName.match(value) || lastName.match(value)) {\r",
-                    "                return true;\r",
-                    "            }\r",
-                    "            return false;\r",
-                    "        }\r",
-                    "    }];    \r",
-                    "    store.filter(filter);\r",
-                    "}\r",
-                    "else {\r",
-                    "   store.clearFilter();\r",
-                    "}"
-                ]
-            },
-            "designerId": "47a53675-303b-4246-86aa-2c18a27bd4ef"
-        },
-        {
-            "type": "basicfunction",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "addContact",
-                "designer|params": [
-                    "button"
-                ],
-                "implHandler": [
-                    "var contacts = this.getContactsList(),\r",
-                    "    store = contacts.getStore(),\r",
-                    "\tfirstName = button.up(\"toolbar\").down('[itemId=firstName]'),\r",
-                    "    lastName = button.up(\"toolbar\").down('[itemId=lastName]'),\r",
-                    "\tmsg = 'Your new contact was added!';\r",
-                    "\r",
-                    "if (firstName.getValue() && lastName.getValue()) {\r",
-                    "\tstore.add({'firstName': firstName.getValue(),'lastName': lastName.getValue(), 'type': 'contacts'});\r",
-                    "    firstName.setValue();\r",
-                    "    lastName.setValue();\r",
-                    "    button.up(\"toolbar\").hide();\r",
-                    "} else {\r",
-                    "\tmsg = 'Please fill in the required fields!';\r",
-                    "}\r",
-                    "\r",
-                    "Ext.Msg.alert('Notice', msg);"
-                ]
-            },
-            "designerId": "ae27c739-1dfa-41e8-add2-cad72136a945"
-        },
-        {
-            "type": "basicfunction",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "cancelAdd",
-                "designer|params": [
-                    "button"
-                ],
-                "implHandler": [
-                    "var firstName = button.up(\"toolbar\").down('[itemId=firstName]'),\r",
-                    "    lastName = button.up(\"toolbar\").down('[itemId=lastName]');\r",
-                    "\r",
-                    "firstName.setValue();\r",
-                    "lastName.setValue();\r",
-                    "\r",
-                    "this.hideAddBar();\r",
-                    "\r",
                     ""
                 ]
             },
-            "designerId": "52d3b31d-006d-466f-bbce-473a612cf3e2"
+            "designerId": "31da4df6-486d-4265-838c-f468fa0dd98a"
         },
         {
-            "type": "basicfunction",
+            "type": "staticfunction",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "hideAddBar",
+                "fn": "createMeeting",
+                "designer|params": [
+                    "userName"
+                ],
                 "implHandler": [
-                    "var main = this.getMainContainer(),\r",
-                    "    addBar = main.down('[itemId=addBar]');\r",
-                    "\r",
-                    "addBar.hide();"
+                    ""
                 ]
             },
-            "designerId": "26c7cbfe-11c3-418b-a96a-03bcf0398df3"
+            "designerId": "a7f027ae-ce4b-4521-9a45-0bda25a5c5b7"
+        },
+        {
+            "type": "staticfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "createSlide",
+                "designer|params": [
+                    "meeting_id",
+                    "user_name",
+                    "data"
+                ],
+                "implHandler": [
+                    ""
+                ]
+            },
+            "designerId": "0758dd3b-0662-460b-816c-388a0729a961"
+        },
+        {
+            "type": "staticfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "addAnnotation",
+                "designer|params": [
+                    "meeting_id",
+                    "user_name",
+                    "slide_id",
+                    "data"
+                ],
+                "implHandler": [
+                    ""
+                ]
+            },
+            "designerId": "b6f7169e-aca2-4694-9ca3-2663ab41c305"
         }
     ]
 }

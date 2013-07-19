@@ -21,10 +21,14 @@ Ext.Loader.setConfig({
 
 Ext.application({
     models: [
-        'Contacts'
+        'Contacts',
+        'Slide',
+        'Annotation'
     ],
     stores: [
-        'Contacts'
+        'Contacts',
+        'Slides',
+        'Annotations'
     ],
     views: [
         'MyContainer',

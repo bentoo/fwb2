@@ -162,58 +162,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "docked": "top",
-                "hidden": true,
-                "itemId": "searchBar",
-                "designer|displayName": "Search Bar"
-            },
-            "designerId": "07a72f76-af51-40ca-a8dc-9d4db0913572",
-            "cn": [
-                {
-                    "type": "Ext.field.Text",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "layout|flex": 1,
-                        "itemId": "searchContacts",
-                        "label": null,
-                        "placeHolder": "Search Contacts"
-                    },
-                    "designerId": "839ce01e-9114-4382-b064-96c3175582a9"
-                },
-                {
-                    "type": "Ext.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "action": "resetSearchbar",
-                        "text": "Cancel"
-                    },
-                    "designerId": "f8647340-1a14-4e22-9710-10a0262635df",
-                    "customConfigs": [
-                        {
-                            "group": "(Custom Properties)",
-                            "name": "action",
-                            "type": "string"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "type": "Ext.Toolbar",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
                 "container|pack": "center",
                 "docked": "bottom",
                 "hidden": false,
@@ -386,79 +334,6 @@
                             "type": "string"
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "type": "Ext.Toolbar",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "docked": "bottom",
-                "hidden": true,
-                "itemId": "addBar",
-                "designer|displayName": "Add Bar"
-            },
-            "designerId": "0df5ed63-f896-495c-8cf9-b5e1b6e72f6d",
-            "cn": [
-                {
-                    "type": "Ext.field.Text",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "layout|flex": 1,
-                        "itemId": "firstName",
-                        "label": null,
-                        "placeHolder": "First Name"
-                    },
-                    "designerId": "451bf38b-a207-4bb2-ba0c-47a7091da0f6"
-                },
-                {
-                    "type": "Ext.field.Text",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "layout|flex": 1,
-                        "itemId": "lastName",
-                        "label": null,
-                        "placeHolder": "Last Name"
-                    },
-                    "designerId": "a44c1eb2-e431-4d79-9e2d-6ca15ec61242"
-                },
-                {
-                    "type": "Ext.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "itemId": "addContact",
-                        "text": "Add"
-                    },
-                    "designerId": "37c104a0-2f06-48d2-8a24-851d122826fc"
-                },
-                {
-                    "type": "Ext.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "itemId": "cancelAdd",
-                        "text": "Cancel"
-                    },
-                    "designerId": "579f31af-c9ab-4b58-8106-9180d23d917b"
                 }
             ]
         },

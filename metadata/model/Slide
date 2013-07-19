@@ -1,0 +1,88 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Slide"
+    },
+    "designerId": "2ca53c00-5b5a-4e7d-b3f3-2674ac123910",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "designerId": "b2fea665-7e33-4c06-b0fe-d390b6991118"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "meeting_id"
+            },
+            "designerId": "6d04c713-7133-4aa0-a760-3abd12039140"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "data"
+            },
+            "designerId": "01a1216d-e854-43cb-9513-572149d613b4"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "image_url"
+            },
+            "designerId": "1f048639-3d47-4414-8c7d-f28c3c13474a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "image_url_tn"
+            },
+            "designerId": "6fee5849-eca6-4a22-8e55-6b3df39cf91f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dateFormat": "timestamp",
+                "name": "created",
+                "type": "date"
+            },
+            "designerId": "f3e4cb1b-43f4-4247-81aa-6e9a386f3fa2"
+        }
+    ]
+}

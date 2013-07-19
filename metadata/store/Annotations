@@ -1,0 +1,14 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "Annotation",
+        "storeId": "MyJsonStore",
+        "designer|userClassName": "Annotations"
+    },
+    "designerId": "c6da8eaa-e54c-4dac-ba79-24032e79f2a3"
+}

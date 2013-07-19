@@ -75,25 +75,6 @@ Ext.define('MyApp.view.Main', {
             },
             {
                 xtype: 'toolbar',
-                docked: 'top',
-                hidden: true,
-                itemId: 'searchBar',
-                items: [
-                    {
-                        xtype: 'textfield',
-                        flex: 1,
-                        itemId: 'searchContacts',
-                        placeHolder: 'Search Contacts'
-                    },
-                    {
-                        xtype: 'button',
-                        action: 'resetSearchbar',
-                        text: 'Cancel'
-                    }
-                ]
-            },
-            {
-                xtype: 'toolbar',
                 docked: 'bottom',
                 hidden: false,
                 layout: {
@@ -174,36 +155,6 @@ Ext.define('MyApp.view.Main', {
                         ],
                         docked: 'right',
                         iconCls: 'overflow_tab'
-                    }
-                ]
-            },
-            {
-                xtype: 'toolbar',
-                docked: 'bottom',
-                hidden: true,
-                itemId: 'addBar',
-                items: [
-                    {
-                        xtype: 'textfield',
-                        flex: 1,
-                        itemId: 'firstName',
-                        placeHolder: 'First Name'
-                    },
-                    {
-                        xtype: 'textfield',
-                        flex: 1,
-                        itemId: 'lastName',
-                        placeHolder: 'Last Name'
-                    },
-                    {
-                        xtype: 'button',
-                        itemId: 'addContact',
-                        text: 'Add'
-                    },
-                    {
-                        xtype: 'button',
-                        itemId: 'cancelAdd',
-                        text: 'Cancel'
                     }
                 ]
             }

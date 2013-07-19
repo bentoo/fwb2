@@ -1,0 +1,14 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "Slide",
+        "storeId": "MyJsonStore",
+        "designer|userClassName": "Slides"
+    },
+    "designerId": "70cb31d0-774d-43ed-85e2-dc849e04bd11"
+}
