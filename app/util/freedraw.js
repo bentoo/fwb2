@@ -29,6 +29,7 @@
         alias: 'widget.freedraw',
         config: {
             background: 'white',
+            backgroundUrl: null,
             listeners: {
                 element: 'element',
                 'drag': function (e) {
@@ -91,6 +92,9 @@
                         p0 = cmp.element.getXY(),
                         p = [e.pageX - p0[0], e.pageY - p0[1]];
                     list.push(p[0], p[1]);
+
+                    cmp.addPath(list);
+/*
                     var path = smoothenList(list);
                     sprite.setAttributes({
                         path: path
@@ -108,6 +112,7 @@
                     sprite.destroy();
                     cmp.getSurface('overlay').renderFrame();
                     sprite = null;
+*/
                 }
             }
         },
@@ -117,7 +122,58 @@
             this.getSurface().setRegion([0, 0, size.width, size.height]);
             this.getSurface('overlay').setRegion([0, 0, size.width, size.height]);
             this.renderFrame();
+        },
+
+        addPath: function (list) {
+
+            var cmp = this,
+                path = smoothenList(list);
+
+            sprite.setAttributes({
+                path: path
+            });
+
+            var newSprite = cmp.getSurface().add({
+                type: 'path',
+                path: smoothenList(list),
+                lineWidth: sprite.attr.lineWidth,
+                lineCap: 'round',
+                lineJoin: 'round',
+                strokeStyle: sprite.attr.strokeStyle
+            });
+            cmp.getSurface().setDirty(true);
+            cmp.getSurface().renderFrame();
+            sprite.destroy();
+            cmp.getSurface('overlay').renderFrame();
+            sprite = null;
+            console.log(path);
+        },
+
+        applyBackgroundUrl: function (newUrl, oldUrl) {
+            var cmp = this;
+            setTimeout(function () {
+                var size = cmp.element.getSize(),
+                    surface = cmp.getSurface(),
+                    //canvas = surface.element.dom.getElementsByTagName('canvas')[0];
+                    //ctx = canvas.getContext('2d'),
+                    newSprite = surface.add(
+                        {
+                            xclass: 'Ext.draw.sprite.Image',
+                            type: 'image',
+                            x: 0,
+                            y: 0,
+                            width: size.width,
+                            height: size.height,
+                            src: newUrl
+                        }
+                    );   
+                cmp.getSurface().setDirty(true);
+                cmp.getSurface().renderFrame();
+                newSprite = null;
+
+            }, 0);            
         }
+
     });
 })();
 
