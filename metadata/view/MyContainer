@@ -1,0 +1,385 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "itemId": "mainContainer",
+        "designer|userClassName": "MyContainer",
+        "mixins": null,
+        "layout": "card"
+    },
+    "designerId": "11034170-7085-44af-96a3-414eb8e5945f",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "hidden": true,
+                "itemId": "searchBar",
+                "ui": "light",
+                "designer|displayName": "Search Bar"
+            },
+            "designerId": "6b4a22e2-5167-4d45-bcbb-80e401eb82ea",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "itemId": "searchContacts",
+                        "label": null,
+                        "placeHolder": "Search Contacts"
+                    },
+                    "designerId": "5b2d195a-3991-4fa8-a281-42693756d061"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "resetSearchbar",
+                        "text": "Cancel"
+                    },
+                    "designerId": "fe487a83-285d-4f71-bc72-ddf7d395ef98",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|pack": "center",
+                "docked": "bottom",
+                "hidden": false,
+                "itemId": null,
+                "designer|displayName": "Buttons Bar"
+            },
+            "designerId": "bc9cdd9f-c8f3-411d-9f90-752bcb628bd5",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "search",
+                        "text": "Search"
+                    },
+                    "designerId": "5bf48de5-0987-4529-83a3-030096835b99",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "var main = this.up(\"[itemId=mainContainer]\"),\r",
+                                    "\tsearchBar = main.down(\"[itemId=searchBar]\");\r",
+                                    "\r",
+                                    "searchBar.show();"
+                                ]
+                            },
+                            "designerId": "4de486b6-057c-4711-9bf8-1ee0fe1d2601"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "add",
+                        "iconCls": "add",
+                        "text": "Add"
+                    },
+                    "designerId": "db9af8bd-8c43-4103-9c35-b88329f8cade",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "var main = this.up(\"[itemId=mainContainer]\"),\r",
+                                    "    addBar = main.down(\"[itemId=addBar]\");\r",
+                                    "\r",
+                                    "addBar.show();"
+                                ]
+                            },
+                            "designerId": "c098fb41-f11f-41f3-93e7-f7b4c397183d"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.ux.TabMenuButton",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "menuItems": [
+                            "[{\r",
+                            "    text: 'All',\r",
+                            "    action: 'filterType',\r",
+                            "    filterType: 'all',    \r",
+                            "    iconCls: 'view_grid'\r",
+                            "   \r",
+                            "},{\r",
+                            "    text: 'Favorites',\r",
+                            "    action: 'filterType',\r",
+                            "    filterType: 'favorites',\r",
+                            "    iconCls: 'done'\r",
+                            "},{\r",
+                            "    text: 'BBM',\r",
+                            "    action: 'filterType',\r",
+                            "    filterType: 'bbm',\r",
+                            "    iconCls: 'bbm'    \r",
+                            "}]"
+                        ],
+                        "action": "hideAddBar",
+                        "docked": "left",
+                        "iconCls": "view_grid"
+                    },
+                    "configAlternates": {
+                        "menuItems": "array"
+                    },
+                    "designerId": "16b233f6-46f6-4a49-993c-4357fee511c6",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "menuItems",
+                            "type": "string"
+                        },
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.ux.OverflowMenuButton",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "menuItems": [
+                            "[{\r",
+                            "    text: 'All',\r",
+                            "    action: 'filterType',\r",
+                            "    filterType: 'all',    \r",
+                            "    iconCls: 'view_grid'\r",
+                            "   \r",
+                            "},{\r",
+                            "    text: 'Favorites',\r",
+                            "    action: 'filterType',\r",
+                            "    filterType: 'favorites',\r",
+                            "    iconCls: 'done'\r",
+                            "},{\r",
+                            "    text: 'BBM',\r",
+                            "    action: 'filterType',\r",
+                            "    filterType: 'bbm',\r",
+                            "    iconCls: 'bbm'    \r",
+                            "}]"
+                        ],
+                        "docked": "right",
+                        "iconCls": "overflow_tab"
+                    },
+                    "configAlternates": {
+                        "menuItems": "array"
+                    },
+                    "designerId": "c66263c5-0b89-4152-a367-dcfd10fd7489",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "menuItems",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": null,
+                "itemId": "contactsList",
+                "designer|createAlias": null,
+                "store": "contacts",
+                "variableHeights": true
+            },
+            "designerId": "6e898286-6acb-445e-b127-a522b76cdaa7",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "implHandler": [
+                            "<div>{firstName} {lastName}</div>"
+                        ],
+                        "designer|displayName": "itemTpl"
+                    },
+                    "designerId": "eab0e5d4-62ce-4cff-ae4e-ab94922d56c6"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "bottom",
+                "hidden": true,
+                "itemId": "addBar",
+                "ui": "light",
+                "designer|displayName": "Add Bar"
+            },
+            "designerId": "d8a575a9-b9df-44a3-adcc-7f4db131ff1d",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "itemId": "firstName",
+                        "label": null,
+                        "placeHolder": "First Name"
+                    },
+                    "designerId": "3949b0a2-8545-40d9-b86d-35e32bf9f6f6"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "itemId": "lastName",
+                        "label": null,
+                        "placeHolder": "Last Name"
+                    },
+                    "designerId": "6cda74a5-2182-45b0-8e3a-e6d46784b621"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "addContact",
+                        "ui": "confirm",
+                        "text": "Add"
+                    },
+                    "designerId": "3ec24c90-526a-4246-a674-7d7a66be1a88"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "cancelAdd",
+                        "ui": "decline",
+                        "text": "Cancel"
+                    },
+                    "designerId": "67ef42f3-1234-45fd-89a0-ed95ffb311a3"
+                }
+            ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "var me = this;    \r",
+                    "\r",
+                    "me.addListener('typefilter', me.filterType, me);\r",
+                    "//me.enableBubble();\r",
+                    "\r",
+                    "//make sure the first list is the default\r",
+                    "me.setActiveItem(0);\r",
+                    "\r",
+                    "me.callParent();"
+                ]
+            },
+            "designerId": "d1b20a84-8747-4f91-b97c-aff8ab6367d6"
+        }
+    ]
+}

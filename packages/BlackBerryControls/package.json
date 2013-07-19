@@ -1,0 +1,46 @@
+{
+    "name": "BlackBerryControls",
+    "type": "code",
+    "creator": "Jason Minnick",
+    "version": "1.0",
+    "compatVersion": "1",
+    "architect": {
+        "defsonly": true,
+        "compatFrameworks": [
+            "touch23"
+        ],
+        "requires": [
+            "bb-all-debug.js"
+        ],
+         "css": [
+            "app.css"
+        ],
+        "classes": [{
+            "definition": "MenuButton.js",
+            "className": "Ext.ux.MenuButton",
+            "js": [],
+            "css": []
+        },{
+            "definition": "OverflowMenuButton.js",
+            "className": "Ext.ux.OverflowMenuButton",
+            "js": [],
+            "css": []
+        },{
+            "definition": "ApplicationMenu.js",
+            "className": "Ext.ux.ApplicationMenu",
+            "js": [],
+            "css": []
+        },{
+            "definition": "TabMenuButton.js",
+            "className": "Ext.ux.TabMenuButton",
+            "js": [],
+            "css": []
+        },{
+            "definition": "ContextMenu.js",
+            "className": "Ext.ux.ContextMenu",
+            "js": [],
+            "css": []
+        }]
+    },
+    "local": true
+}

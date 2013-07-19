@@ -1,0 +1,53 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "groupField": "firstName",
+        "model": "Contacts",
+        "storeId": "contacts",
+        "designer|userClassName": "Contacts"
+    },
+    "designerId": "940390b2-db00-4975-92fb-ef676b07f90a",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "http://10.200.1.122/touch-2.3.0-beta/touch-2.3.0/examples/blackberry/contacts.json"
+            },
+            "designerId": "59ade608-16d2-4d06-8178-490843798f91",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "60db8039-d6db-4157-8722-3093e49a6103"
+                }
+            ]
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "firstName"
+            },
+            "designerId": "f415add9-fd23-42e3-aea3-18dbf343bd1c"
+        }
+    ]
+}

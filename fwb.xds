@@ -1,0 +1,45 @@
+{
+    "name": "fwb",
+    "settings": {
+        "canvasControls": {
+            "viewportSize": {
+                "name": "iPhone",
+                "builtIn": true,
+                "height": 480,
+                "width": 320
+            },
+            "viewportOrientation": "landscape"
+        },
+        "urlPrefix": "http://localhost/architect/blackberrydemo",
+        "exportPath": ""
+    },
+    "xdsVersion": "3.0.0",
+    "xdsBuild": 1119,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "touch23",
+    "viewOrderMap": {
+        "view": [
+            "11034170-7085-44af-96a3-414eb8e5945f",
+            "340d294a-7e4a-4c0d-810d-1862ac6722da",
+            "6141e20e-cdc1-4c55-a3a6-fc0f5ef804a3"
+        ],
+        "store": [
+            "940390b2-db00-4975-92fb-ef676b07f90a"
+        ],
+        "controller": [
+            "f23e95e3-0c78-462c-bf0f-e63ffd1d3ed4"
+        ],
+        "model": [
+            "f60edda9-d7f9-4f28-b189-bcb5e4826127"
+        ],
+        "resource": [
+            "847f2132-9e25-47ca-b856-a4b7bb96d664",
+            "e51561d8-dde9-4933-a318-a620e713ed3b",
+            "d7969179-7d6a-4128-b96d-a15b5a526d93"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

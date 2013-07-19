@@ -1,0 +1,13 @@
+{
+    "type": "cssresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "css",
+        "url": "packages/BlackBerryControls/resources/css/app.css"
+    },
+    "designerId": "d7969179-7d6a-4128-b96d-a15b5a526d93"
+}

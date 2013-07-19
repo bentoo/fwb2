@@ -1,0 +1,17 @@
+{
+    "type": "Ext.Button",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "margin": "0 40 0 40",
+        "maxWidth": 300,
+        "padding": null,
+        "designer|userClassName": "MyButton5",
+        "designer|userAlias": "mybutton5",
+        "text": "Create Meeting"
+    },
+    "designerId": "6141e20e-cdc1-4c55-a3a6-fc0f5ef804a3"
+}
