@@ -16,46 +16,213 @@
 Ext.define('MyApp.view.Main', {
     extend: 'Ext.Container',
 
-    requires: [
-        'MyApp.view.MyButton5'
-    ],
-
     config: {
-        padding: 10,
+        itemId: 'mainContainer',
         layout: {
-            pack: 'center',
-            type: 'vbox'
+            type: 'card'
         },
         items: [
             {
-                xtype: 'spacer'
+                xtype: 'container',
+                id: 'Create',
+                items: [
+                    {
+                        xtype: 'fieldset',
+                        title: 'Meeting',
+                        items: [
+                            {
+                                xtype: 'textfield',
+                                label: 'Title'
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'fieldset',
+                        title: 'User',
+                        items: [
+                            {
+                                xtype: 'textfield',
+                                label: 'Name'
+                            }
+                        ]
+                    }
+                ]
             },
             {
-                xtype: 'spacer',
-                html: '<div style="text-align:center"><img src="http://feedgrowth.com/wp-content/uploads/2009/09/whiteboard-capture-logo.png"/></div>'
+                xtype: 'container',
+                id: 'Share'
             },
             {
-                xtype: 'spacer'
+                xtype: 'container',
+                id: 'Join'
             },
             {
-                xtype: 'mybutton5',
-                id: 'createMeeting',
-                margin: 'auto'
+                xtype: 'container',
+                id: 'Slides'
             },
             {
-                xtype: 'spacer',
-                maxHeight: 30
+                xtype: 'container',
+                id: 'Capture'
             },
             {
-                xtype: 'mybutton5',
-                id: 'joinMeeting',
-                margin: 'auto',
-                text: 'Join Meeting'
+                xtype: 'container',
+                id: 'Edit'
             },
             {
-                xtype: 'spacer'
+                xtype: 'container',
+                id: 'History'
+            },
+            {
+                xtype: 'toolbar',
+                docked: 'top',
+                hidden: true,
+                itemId: 'searchBar',
+                ui: 'light',
+                items: [
+                    {
+                        xtype: 'textfield',
+                        flex: 1,
+                        itemId: 'searchContacts',
+                        placeHolder: 'Search Contacts'
+                    },
+                    {
+                        xtype: 'button',
+                        action: 'resetSearchbar',
+                        text: 'Cancel'
+                    }
+                ]
+            },
+            {
+                xtype: 'toolbar',
+                docked: 'bottom',
+                hidden: false,
+                layout: {
+                    pack: 'center',
+                    type: 'hbox'
+                },
+                items: [
+                    {
+                        xtype: 'button',
+                        handler: function(button, event) {
+                            var main = this.up("[itemId=mainContainer]"),
+                                searchBar = main.down("[itemId=searchBar]");
+
+                            searchBar.show();
+                        },
+                        iconCls: 'search',
+                        text: 'Search'
+                    },
+                    {
+                        xtype: 'button',
+                        handler: function(button, event) {
+                            var main = this.up("[itemId=mainContainer]"),
+                                addBar = main.down("[itemId=addBar]");
+
+                            addBar.show();
+                        },
+                        itemId: 'add',
+                        iconCls: 'add',
+                        text: 'Add'
+                    },
+                    {
+                        xtype: 'tabmenubutton',
+                        menuItems: [
+                            {
+                                text: 'All',
+                                action: 'filterType',
+                                filterType: 'all',
+                                iconCls: 'view_grid'
+                            },
+                            {
+                                text: 'Favorites',
+                                action: 'filterType',
+                                filterType: 'favorites',
+                                iconCls: 'done'
+                            },
+                            {
+                                text: 'BBM',
+                                action: 'filterType',
+                                filterType: 'bbm',
+                                iconCls: 'bbm'
+                            }
+                        ],
+                        action: 'hideAddBar',
+                        docked: 'left',
+                        iconCls: 'view_grid'
+                    },
+                    {
+                        xtype: 'overflowmenubutton',
+                        menuItems: [
+                            {
+                                text: 'All',
+                                action: 'filterType',
+                                filterType: 'all',
+                                iconCls: 'view_grid'
+                            },
+                            {
+                                text: 'Favorites',
+                                action: 'filterType',
+                                filterType: 'favorites',
+                                iconCls: 'done'
+                            },
+                            {
+                                text: 'BBM',
+                                action: 'filterType',
+                                filterType: 'bbm',
+                                iconCls: 'bbm'
+                            }
+                        ],
+                        docked: 'right',
+                        iconCls: 'overflow_tab'
+                    }
+                ]
+            },
+            {
+                xtype: 'toolbar',
+                docked: 'bottom',
+                hidden: true,
+                itemId: 'addBar',
+                ui: 'light',
+                items: [
+                    {
+                        xtype: 'textfield',
+                        flex: 1,
+                        itemId: 'firstName',
+                        placeHolder: 'First Name'
+                    },
+                    {
+                        xtype: 'textfield',
+                        flex: 1,
+                        itemId: 'lastName',
+                        placeHolder: 'Last Name'
+                    },
+                    {
+                        xtype: 'button',
+                        itemId: 'addContact',
+                        ui: 'confirm',
+                        text: 'Add'
+                    },
+                    {
+                        xtype: 'button',
+                        itemId: 'cancelAdd',
+                        ui: 'decline',
+                        text: 'Cancel'
+                    }
+                ]
             }
         ]
+    },
+
+    initialize: function() {
+        var me = this;
+        
+        me.addListener('typefilter', me.filterType, me);
+        //me.enableBubble();
+        
+        //make sure the first list is the default
+        me.setActiveItem(0);
+        
+        me.callParent();
     }
 
 });

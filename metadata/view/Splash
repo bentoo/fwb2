@@ -1,0 +1,98 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|pack": "center",
+        "padding": 10,
+        "designer|userClassName": "Splash",
+        "designer|initialView": true,
+        "layout": "vbox"
+    },
+    "designerId": "340d294a-7e4a-4c0d-810d-1862ac6722da",
+    "cn": [
+        {
+            "type": "Ext.Spacer",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "78ee1aff-d0b2-4814-848d-8924964b2c2d"
+        },
+        {
+            "type": "Ext.Spacer",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": "<div style=\"text-align:center\"><img src=\"http://feedgrowth.com/wp-content/uploads/2009/09/whiteboard-capture-logo.png\"/></div>"
+            },
+            "designerId": "66193e9a-fd48-4084-98ae-ee2ccd2d76ef"
+        },
+        {
+            "type": "Ext.Spacer",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "b7be877e-bacf-47f1-b999-762a1b3c0df6"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "createMeeting",
+                "margin": "auto"
+            },
+            "designerId": "20e92c35-499b-43df-ba48-3df9ada15713",
+            "masterInstanceId": "6141e20e-cdc1-4c55-a3a6-fc0f5ef804a3"
+        },
+        {
+            "type": "Ext.Spacer",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "maxHeight": 30
+            },
+            "designerId": "2e308f4d-fe69-460f-a1e6-8b370c326e77"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "joinMeeting",
+                "margin": "auto",
+                "text": "Join Meeting"
+            },
+            "designerId": "49908266-259b-460b-a0e0-7e85116e4514",
+            "masterInstanceId": "6141e20e-cdc1-4c55-a3a6-fc0f5ef804a3"
+        },
+        {
+            "type": "Ext.Spacer",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "3336701a-3236-4c38-a484-a7fdefdca6ad"
+        }
+    ]
+}

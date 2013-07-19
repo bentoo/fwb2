@@ -6,93 +6,485 @@
     },
     "codeClass": null,
     "userConfig": {
-        "container|pack": "center",
-        "padding": 10,
+        "itemId": "mainContainer",
         "designer|userClassName": "Main",
-        "designer|initialView": true,
-        "layout": "vbox"
+        "mixins": null,
+        "layout": "card"
     },
-    "designerId": "340d294a-7e4a-4c0d-810d-1862ac6722da",
+    "designerId": "45cf0923-c1e3-45b2-a1fa-c25e077d4f97",
     "cn": [
         {
-            "type": "Ext.Spacer",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "designerId": "78ee1aff-d0b2-4814-848d-8924964b2c2d"
-        },
-        {
-            "type": "Ext.Spacer",
+            "type": "Ext.Container",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "html": "<div style=\"text-align:center\"><img src=\"http://feedgrowth.com/wp-content/uploads/2009/09/whiteboard-capture-logo.png\"/></div>"
+                "id": "Create"
             },
-            "designerId": "66193e9a-fd48-4084-98ae-ee2ccd2d76ef"
+            "designerId": "a7910198-5cf8-4e6d-9b46-a3bae79a587f",
+            "cn": [
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Meeting"
+                    },
+                    "designerId": "b94dbff8-954a-4432-922b-37045de620b5",
+                    "cn": [
+                        {
+                            "type": "Ext.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "label": "Title"
+                            },
+                            "designerId": "4781d400-a5e8-4285-aaa0-1d2eecb48f36"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "User"
+                    },
+                    "designerId": "6883c509-fcb4-4d34-9c22-8100376fced2",
+                    "cn": [
+                        {
+                            "type": "Ext.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "label": "Name"
+                            },
+                            "designerId": "539e2004-6125-4432-aea5-d95abf7e99dc"
+                        }
+                    ]
+                }
+            ]
         },
         {
-            "type": "Ext.Spacer",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "designerId": "b7be877e-bacf-47f1-b999-762a1b3c0df6"
-        },
-        {
-            "type": "linkedinstance",
+            "type": "Ext.Container",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "id": "createMeeting",
-                "margin": "auto"
+                "id": "Share"
             },
-            "designerId": "20e92c35-499b-43df-ba48-3df9ada15713",
-            "masterInstanceId": "6141e20e-cdc1-4c55-a3a6-fc0f5ef804a3"
+            "designerId": "9b6ce9bf-2410-4036-9fbb-b1459a781461"
         },
         {
-            "type": "Ext.Spacer",
+            "type": "Ext.Container",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "maxHeight": 30
+                "id": "Join"
             },
-            "designerId": "2e308f4d-fe69-460f-a1e6-8b370c326e77"
+            "designerId": "864be91b-54aa-447c-8476-81a4c5255c16"
         },
         {
-            "type": "linkedinstance",
+            "type": "Ext.Container",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "id": "joinMeeting",
-                "margin": "auto",
-                "text": "Join Meeting"
+                "id": "Slides"
             },
-            "designerId": "49908266-259b-460b-a0e0-7e85116e4514",
-            "masterInstanceId": "6141e20e-cdc1-4c55-a3a6-fc0f5ef804a3"
+            "designerId": "dde0c94c-baa2-43b8-b9b3-6e7b6b34e642"
         },
         {
-            "type": "Ext.Spacer",
+            "type": "Ext.Container",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
-            "designerId": "3336701a-3236-4c38-a484-a7fdefdca6ad"
+            "userConfig": {
+                "id": "Capture"
+            },
+            "designerId": "e9df5bc1-8115-491d-9d6e-83799e4edf75"
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "Edit"
+            },
+            "designerId": "ef7b8a1b-49dd-4151-bd7a-58ec5d1cf548"
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "History"
+            },
+            "designerId": "244c7e39-8342-4ef4-bdc4-ec890acd42b4"
+        },
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "hidden": true,
+                "itemId": "searchBar",
+                "ui": "light",
+                "designer|displayName": "Search Bar"
+            },
+            "designerId": "07a72f76-af51-40ca-a8dc-9d4db0913572",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "itemId": "searchContacts",
+                        "label": null,
+                        "placeHolder": "Search Contacts"
+                    },
+                    "designerId": "839ce01e-9114-4382-b064-96c3175582a9"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "resetSearchbar",
+                        "text": "Cancel"
+                    },
+                    "designerId": "f8647340-1a14-4e22-9710-10a0262635df",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|pack": "center",
+                "docked": "bottom",
+                "hidden": false,
+                "itemId": null,
+                "designer|displayName": "Buttons Bar"
+            },
+            "designerId": "e2e6a58d-b088-41c1-a949-41540f6295d1",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "search",
+                        "text": "Search"
+                    },
+                    "designerId": "5c9e229d-71fb-4046-9663-ccc4da026cf0",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "var main = this.up(\"[itemId=mainContainer]\"),\r",
+                                    "\tsearchBar = main.down(\"[itemId=searchBar]\");\r",
+                                    "\r",
+                                    "searchBar.show();"
+                                ]
+                            },
+                            "designerId": "542bc19e-1784-4e61-8997-0c1ccfd07d94"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "add",
+                        "iconCls": "add",
+                        "text": "Add"
+                    },
+                    "designerId": "74087537-6437-4b50-8f5a-d29f56502b71",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "var main = this.up(\"[itemId=mainContainer]\"),\r",
+                                    "    addBar = main.down(\"[itemId=addBar]\");\r",
+                                    "\r",
+                                    "addBar.show();"
+                                ]
+                            },
+                            "designerId": "e056ac34-5ed4-4257-aaaa-efb933bd9247"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.ux.TabMenuButton",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "menuItems": [
+                            "[{\r",
+                            "    text: 'All',\r",
+                            "    action: 'filterType',\r",
+                            "    filterType: 'all',    \r",
+                            "    iconCls: 'view_grid'\r",
+                            "   \r",
+                            "},{\r",
+                            "    text: 'Favorites',\r",
+                            "    action: 'filterType',\r",
+                            "    filterType: 'favorites',\r",
+                            "    iconCls: 'done'\r",
+                            "},{\r",
+                            "    text: 'BBM',\r",
+                            "    action: 'filterType',\r",
+                            "    filterType: 'bbm',\r",
+                            "    iconCls: 'bbm'    \r",
+                            "}]"
+                        ],
+                        "action": "hideAddBar",
+                        "docked": "left",
+                        "iconCls": "view_grid"
+                    },
+                    "configAlternates": {
+                        "menuItems": "array"
+                    },
+                    "designerId": "7784a915-fc0c-485b-94cb-b8a3410d409d",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "menuItems",
+                            "type": "string"
+                        },
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.ux.OverflowMenuButton",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "menuItems": [
+                            "[{\r",
+                            "    text: 'All',\r",
+                            "    action: 'filterType',\r",
+                            "    filterType: 'all',    \r",
+                            "    iconCls: 'view_grid'\r",
+                            "   \r",
+                            "},{\r",
+                            "    text: 'Favorites',\r",
+                            "    action: 'filterType',\r",
+                            "    filterType: 'favorites',\r",
+                            "    iconCls: 'done'\r",
+                            "},{\r",
+                            "    text: 'BBM',\r",
+                            "    action: 'filterType',\r",
+                            "    filterType: 'bbm',\r",
+                            "    iconCls: 'bbm'    \r",
+                            "}]"
+                        ],
+                        "docked": "right",
+                        "iconCls": "overflow_tab"
+                    },
+                    "configAlternates": {
+                        "menuItems": "array"
+                    },
+                    "designerId": "cd9206e9-4d95-41ba-815a-927206a06daa",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "menuItems",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "bottom",
+                "hidden": true,
+                "itemId": "addBar",
+                "ui": "light",
+                "designer|displayName": "Add Bar"
+            },
+            "designerId": "0df5ed63-f896-495c-8cf9-b5e1b6e72f6d",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "itemId": "firstName",
+                        "label": null,
+                        "placeHolder": "First Name"
+                    },
+                    "designerId": "451bf38b-a207-4bb2-ba0c-47a7091da0f6"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": 1,
+                        "itemId": "lastName",
+                        "label": null,
+                        "placeHolder": "Last Name"
+                    },
+                    "designerId": "a44c1eb2-e431-4d79-9e2d-6ca15ec61242"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "addContact",
+                        "ui": "confirm",
+                        "text": "Add"
+                    },
+                    "designerId": "37c104a0-2f06-48d2-8a24-851d122826fc"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "cancelAdd",
+                        "ui": "decline",
+                        "text": "Cancel"
+                    },
+                    "designerId": "579f31af-c9ab-4b58-8106-9180d23d917b"
+                }
+            ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "var me = this;    \r",
+                    "\r",
+                    "me.addListener('typefilter', me.filterType, me);\r",
+                    "//me.enableBubble();\r",
+                    "\r",
+                    "//make sure the first list is the default\r",
+                    "me.setActiveItem(0);\r",
+                    "\r",
+                    "me.callParent();"
+                ]
+            },
+            "designerId": "5b03fc97-6c18-4461-97fa-4fde5356768d"
         }
     ]
 }

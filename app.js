@@ -28,8 +28,9 @@ Ext.application({
     ],
     views: [
         'MyContainer',
-        'Main',
-        'MyButton5'
+        'Splash',
+        'MyButton5',
+        'Main'
     ],
     controllers: [
         'MyController'
@@ -38,7 +39,7 @@ Ext.application({
 
     launch: function() {
 
-        Ext.create('MyApp.view.Main', {fullscreen: true});
+        Ext.create('MyApp.view.Splash', {fullscreen: true});
     }
 
 });

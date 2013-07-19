@@ -15,7 +15,8 @@
         "views": [
             "MyContainer",
             "Main",
-            "MyButton5"
+            "MyButton5",
+            "Create"
         ],
         "controllers": [
             "MyController"
