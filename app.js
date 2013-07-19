@@ -32,7 +32,7 @@ Ext.application({
     ],
     views: [
         'MyContainer',
-        'Splash',
+        null,
         'MyButton5',
         'Main'
     ],

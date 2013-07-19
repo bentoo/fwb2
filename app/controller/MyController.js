@@ -31,9 +31,40 @@ Ext.define('MyApp.controller.MyController', {
 
         addAnnotation: function(meeting_id, user_name, slide_id, data) {
 
+        },
+
+        setViewNameById: function(item_id) {
+
+            var i = 0;
+            while (i < this.getMain().items.items[i].id == item_id)
+            {
+                i++;
+            }
+            this.getMain().setActiveItem(i);
         }
     },
 
     config: {
+        refs: {
+            main: '#Main'
+        },
+
+        control: {
+            "#joinMeeting": {
+                tap: 'onJoinMeetingTap'
+            },
+            "#createMeeting": {
+                tap: 'onCreateMeetingTap'
+            }
+        }
+    },
+
+    onJoinMeetingTap: function(button, e, eOpts) {
+        this.getMain().setActiveItem(1);
+    },
+
+    onCreateMeetingTap: function(button, e, eOpts) {
+
     }
+
 });

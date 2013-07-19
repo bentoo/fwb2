@@ -16,16 +16,146 @@
 Ext.define('MyApp.view.Main', {
     extend: 'Ext.Container',
 
+    requires: [
+        'MyApp.view.MyButton5'
+    ],
+
     config: {
-        activeItem: 1,
+        activeItem: 2,
+        id: 'Main',
         itemId: 'mainContainer',
         layout: {
             type: 'card'
         },
         items: [
             {
-                xtype: 'freedraw',
-                id: 'Edit'
+                xtype: 'container',
+                padding: 10,
+                layout: {
+                    pack: 'center',
+                    type: 'vbox'
+                },
+                items: [
+                    {
+                        xtype: 'spacer'
+                    },
+                    {
+                        xtype: 'spacer',
+                        html: '<div style="text-align:center"><img src="http://feedgrowth.com/wp-content/uploads/2009/09/whiteboard-capture-logo.png"/></div>'
+                    },
+                    {
+                        xtype: 'spacer'
+                    },
+                    {
+                        xtype: 'mybutton5',
+                        id: 'createMeeting',
+                        margin: 'auto'
+                    },
+                    {
+                        xtype: 'spacer',
+                        maxHeight: 30
+                    },
+                    {
+                        xtype: 'mybutton5',
+                        id: 'joinMeeting',
+                        margin: 'auto',
+                        text: 'Join Meeting'
+                    },
+                    {
+                        xtype: 'spacer'
+                    }
+                ]
+            },
+            {
+                xtype: 'container',
+                id: 'Edit',
+                items: [
+                    {
+                        xtype: 'toolbar',
+                        docked: 'bottom',
+                        hidden: false,
+                        layout: {
+                            pack: 'center',
+                            type: 'hbox'
+                        },
+                        items: [
+                            {
+                                xtype: 'button',
+                                handler: function(button, event) {
+                                    var main = this.up("[itemId=mainContainer]"),
+                                        searchBar = main.down("[itemId=searchBar]");
+
+                                    searchBar.show();
+                                },
+                                iconCls: 'search',
+                                text: 'Search'
+                            },
+                            {
+                                xtype: 'button',
+                                handler: function(button, event) {
+                                    var main = this.up("[itemId=mainContainer]"),
+                                        addBar = main.down("[itemId=addBar]");
+
+                                    addBar.show();
+                                },
+                                itemId: 'add',
+                                iconCls: 'add',
+                                text: 'Add'
+                            },
+                            {
+                                xtype: 'tabmenubutton',
+                                menuItems: [
+                                    {
+                                        text: 'All',
+                                        action: 'filterType',
+                                        filterType: 'all',
+                                        iconCls: 'view_grid'
+                                    },
+                                    {
+                                        text: 'Favorites',
+                                        action: 'filterType',
+                                        filterType: 'favorites',
+                                        iconCls: 'done'
+                                    },
+                                    {
+                                        text: 'BBM',
+                                        action: 'filterType',
+                                        filterType: 'bbm',
+                                        iconCls: 'bbm'
+                                    }
+                                ],
+                                action: 'hideAddBar',
+                                docked: 'left',
+                                iconCls: 'view_grid'
+                            },
+                            {
+                                xtype: 'overflowmenubutton',
+                                menuItems: [
+                                    {
+                                        text: 'All',
+                                        action: 'filterType',
+                                        filterType: 'all',
+                                        iconCls: 'view_grid'
+                                    },
+                                    {
+                                        text: 'Favorites',
+                                        action: 'filterType',
+                                        filterType: 'favorites',
+                                        iconCls: 'done'
+                                    },
+                                    {
+                                        text: 'BBM',
+                                        action: 'filterType',
+                                        filterType: 'bbm',
+                                        iconCls: 'bbm'
+                                    }
+                                ],
+                                docked: 'right',
+                                iconCls: 'overflow_tab'
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 xtype: 'container',
@@ -66,97 +196,12 @@ Ext.define('MyApp.view.Main', {
                 id: 'Slides'
             },
             {
-                xtype: 'container',
+                xtype: 'camera',
                 id: 'Capture'
             },
             {
                 xtype: 'container',
                 id: 'History'
-            },
-            {
-                xtype: 'toolbar',
-                docked: 'bottom',
-                hidden: false,
-                layout: {
-                    pack: 'center',
-                    type: 'hbox'
-                },
-                items: [
-                    {
-                        xtype: 'button',
-                        handler: function(button, event) {
-                            var main = this.up("[itemId=mainContainer]"),
-                                searchBar = main.down("[itemId=searchBar]");
-
-                            searchBar.show();
-                        },
-                        iconCls: 'search',
-                        text: 'Search'
-                    },
-                    {
-                        xtype: 'button',
-                        handler: function(button, event) {
-                            var main = this.up("[itemId=mainContainer]"),
-                                addBar = main.down("[itemId=addBar]");
-
-                            addBar.show();
-                        },
-                        itemId: 'add',
-                        iconCls: 'add',
-                        text: 'Add'
-                    },
-                    {
-                        xtype: 'tabmenubutton',
-                        menuItems: [
-                            {
-                                text: 'All',
-                                action: 'filterType',
-                                filterType: 'all',
-                                iconCls: 'view_grid'
-                            },
-                            {
-                                text: 'Favorites',
-                                action: 'filterType',
-                                filterType: 'favorites',
-                                iconCls: 'done'
-                            },
-                            {
-                                text: 'BBM',
-                                action: 'filterType',
-                                filterType: 'bbm',
-                                iconCls: 'bbm'
-                            }
-                        ],
-                        action: 'hideAddBar',
-                        docked: 'left',
-                        iconCls: 'view_grid'
-                    },
-                    {
-                        xtype: 'overflowmenubutton',
-                        menuItems: [
-                            {
-                                text: 'All',
-                                action: 'filterType',
-                                filterType: 'all',
-                                iconCls: 'view_grid'
-                            },
-                            {
-                                text: 'Favorites',
-                                action: 'filterType',
-                                filterType: 'favorites',
-                                iconCls: 'done'
-                            },
-                            {
-                                text: 'BBM',
-                                action: 'filterType',
-                                filterType: 'bbm',
-                                iconCls: 'bbm'
-                            }
-                        ],
-                        docked: 'right',
-                        iconCls: 'overflow_tab'
-                    }
-                ]
             }
         ]
     },

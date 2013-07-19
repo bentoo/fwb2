@@ -7,7 +7,7 @@
     "codeClass": null,
     "userConfig": {
         "designer|userClassName": "Library",
-        "basePath": "http://10.200.1.122/architect/touch230/",
+        "basePath": "../architect/touch230/",
         "debug": true,
         "theme": "freedraw.js"
     },

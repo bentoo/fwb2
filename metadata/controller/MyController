@@ -87,6 +87,79 @@
                 ]
             },
             "designerId": "b6f7169e-aca2-4694-9ca3-2663ab41c305"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onJoinMeetingTap",
+                "implHandler": [
+                    "this.getMain().setActiveItem(1);"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#joinMeeting"
+            },
+            "designerId": "9ce71c0b-bafd-484d-97ae-65bf2fd4f308"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onCreateMeetingTap",
+                "implHandler": [
+                    ""
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#createMeeting"
+            },
+            "designerId": "31440437-247e-44ef-bd64-321544a45499"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "main",
+                "selector": "#Main"
+            },
+            "designerId": "d4659b0c-379f-4859-8e08-fec2f3172694"
+        },
+        {
+            "type": "staticfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "setViewNameById",
+                "designer|params": [
+                    "item_id"
+                ],
+                "implHandler": [
+                    "\r",
+                    "var i = 0; \r",
+                    "while (i < this.getMain().items.items[i].id == item_id)\r",
+                    "{\r",
+                    "\ti++;\r",
+                    "}\r",
+                    "this.getMain().setActiveItem(i);"
+                ]
+            },
+            "designerId": "2eb45959-7038-4464-97b3-c0e2fc8cde77"
         }
     ]
 }
